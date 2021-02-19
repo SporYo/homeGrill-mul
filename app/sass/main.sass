@@ -1,0 +1,428 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik:ital,wght@0,400;0,900;1,700&display=swap')
+
+
+// Пользовательские стили
+
+//font-family: 'Pacifico', cursive
+//font-family: 'Rubik', sans-serif
+
+body
+  font-family: 'Rubik', sans-serif
+  color: $black
+
+.container
+  width: 1200px
+  margin: 0 auto
+
+.header
+  width: 100%
+  height: 70px
+  background: #fff
+  z-index: 999
+  &__content
+    height: 70px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__nav
+    width: 80%
+    display: flex
+    justify-content: space-around
+  &__link
+    text-decoration: none
+    line-height: 19px
+    color: black
+    &:hover
+      color: $red
+      transition: .7s
+  &__menu--icon
+    cursor: pointer
+  &__links
+    position: absolute
+    top: 70px
+    left: 0
+    background: #EFEFEF
+    width: 100%
+    height: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 10px
+    transition: .7s
+    z-index: 9999
+    .header__link
+      text-align: center
+      margin: 10px 0
+      padding-bottom: 10px
+      width: 300px
+      font-size: 20px
+      line-height: 24px
+      text-align: center
+      &:not(:last-child)
+        border-bottom: 1px solid #BEBEBE
+  &__menu--icon
+    display: none
+        
+    
+
+.welcome
+  background: url("../img/welcome/bg.png")
+  background-size: cover
+  padding: 100px 0 50px 0
+  &__content
+    position: relative
+  &__title
+    font-weight: bold
+    font-size: 40px
+    line-height: 47px
+    color: $darkred
+  &__subtitle
+    font-size: 30px
+    line-height: 36px
+    margin-top: 20px
+  &__price
+    height: 170px
+    width: 100%
+    background: $orange
+    margin-top: 20px
+    padding: 30px
+    color: white
+    display: flex
+    align-items: start
+    &__text
+      font-size: 30px
+      line-height: 36px
+    &--new
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin-right: 30px
+    &--big
+      font-weight: bold
+      font-size: 70px
+      line-height: 83px
+    &--line
+      font-size: 50px
+      line-height: 59px
+      text-decoration-line: line-through
+    &--old
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+  &__bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: 50px
+  &__button
+    width: 360px
+    text-align: center
+    a
+      font-weight: 500
+      font-size: 35px
+      line-height: 41px
+      color: black
+      text-decoration: none
+      background: radial-gradient(69.51% 69.51% at 50% 30.49%, #FFEE97 0%, #FFD600 100%)
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 360px
+      height: 80px
+      text-align: center
+      border-radius: 40px
+      position: relative
+      box-shadow: 0 8px 0 0 rgba(186, 156, 0, 1)
+      margin: 30px 0
+    span
+      font-weight: 500
+      font-size: 20px
+      line-height: 24px
+  &__items
+    width: 600px
+    margin-top: 30px
+  &__list
+    width: 100%
+    display: flex
+    justify-content: space-around
+    margin-bottom: 20px
+    span
+      font-size: 22px
+      line-height: 26px
+      display: flex
+  &__num
+    color: white
+    background: black
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 25px
+    margin-right: 10px
+  &__grill
+    position: absolute
+    right: 0
+    top: 0
+
+.recipes
+  background: url("../img/recipes/bg.png")
+  background-size: contain
+  background-repeat: no-repeat
+  background-attachment: fixed
+  padding: 50px 0
+  &__content
+    background: rgba(255, 255, 255, 0.8)
+  &__title
+    text-align: center
+    font-weight: bold
+    font-size: 40px
+    line-height: 47px
+    color: $darkred
+  &__blocks
+    margin-top: 40px
+    display: flex
+  &__block
+    width: 50%
+    padding: 20px
+    position: relative
+    p
+      font-size: 20px
+      line-height: 24px
+      margin: 20px 0
+    video
+      width: 100%
+      height: 350px
+  &__img
+    position: absolute
+    right: 30px
+    top: -120px
+  &__item
+    display: flex
+    align-items: center
+    img
+      margin-right: 10px
+
+.what
+  background: url("../img/what/bg.png")
+  background-size: cover
+  padding: 30px 0
+  color: white
+  &__title
+    font-weight: bold
+    font-size: 40px
+    line-height: 47px
+    text-align: center
+  &__items
+    width: 50%
+  &__item
+    display: flex
+    align-items: center
+    img
+      margin-right: 20px
+    p
+      font-size: 20px
+      line-height: 24px
+
+.discount
+  background: $orange
+  &__content
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__img
+    margin: -30px 0
+  &__title
+    font-weight: bold
+    font-size: 30px
+    line-height: 36px
+  &__subtitle
+    font-size: 20px
+    line-height: 24px
+    font-weight: 300
+    margin: 10px 0
+  &__description
+    color: white
+  &__price
+    &--new
+      font-weight: bold
+      font-size: 50px
+      line-height: 59px
+      margin-right: 30px
+    &--old
+      font-size: 30px
+      line-height: 36px
+      text-decoration-line: line-through
+  a
+    font-weight: 500
+    font-size: 35px
+    line-height: 41px
+    color: black
+    text-decoration: none
+    background: radial-gradient(69.51% 69.51% at 50% 30.49%, #FFEE97 0%, #FFD600 100%)
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 360px
+    height: 80px
+    text-align: center
+    border-radius: 40px
+    position: relative
+    box-shadow: 0 8px 0 0 rgba(186, 156, 0, 1)
+
+.catalog
+  background: $yellow
+  padding: 50px 0
+  &__title
+    font-weight: bold
+    font-size: 40px
+    line-height: 47px
+    text-align: center
+    color: $darkred
+  &__items
+    display: flex
+    justify-content: space-between
+    margin-top: 30px
+  &__item
+    width: 300px
+    text-align: center
+    p
+      font-size: 30px
+      line-height: 36px
+      text-align: center
+
+.set
+  background: url("../img/set/bg.png")
+  background-size: contain
+  background-repeat: no-repeat
+  background-attachment: fixed
+  padding: 50px 0
+  &__content
+    background: $yellow
+    padding: 40px
+  &__title
+    font-weight: bold
+    font-size: 40px
+    line-height: 47px
+    text-align: center
+    color: #5A0000
+  &__blocks
+    display: flex
+    margin-top: 30px
+  &__block
+    width: 50%
+    img
+      width: 100%
+    h4
+      font-weight: bold
+      font-size: 30px
+      line-height: 36px
+      margin-bottom: 40px
+    p
+      font-size: 20px
+      line-height: 24px
+      margin-bottom: 10px
+
+.reviews
+  padding: 50px 0
+  h2
+    font-weight: bold
+    font-size: 40px
+    line-height: 47px
+    text-align: center
+    color: #5A0000
+  &__item
+    width: 300px
+    img
+      width: 300px
+      margin: 30px auto
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2)
+
+.order
+  background: $black
+  padding: 50px 0
+  color: white
+  &__title
+    font-weight: bold
+    font-size: 40px
+    line-height: 47px
+    text-align: center
+  &__items
+    margin-top: 30px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+  &__item
+    width: 300px
+    display: flex
+    flex-direction: column
+    align-items: center
+    h4
+      font-weight: 900
+      font-size: 20px
+      line-height: 24px
+      margin: 20px 0
+
+.form
+  display: flex
+  flex-direction: column
+  p
+    font-weight: bold
+    font-size: 18px
+    line-height: 24px
+    text-align: center
+    margin: 10px 0
+  input
+    background: #FFFFFF
+    border-radius: 30px
+    width: 368px
+    height: 64px
+    border: none
+    outline: none
+    text-align: center
+  button
+    font-weight: 500
+    font-size: 35px
+    line-height: 41px
+    color: black
+    text-decoration: none
+    background: radial-gradient(69.51% 69.51% at 50% 30.49%, #FFEE97 0%, #FFD600 100%)
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 360px
+    height: 80px
+    text-align: center
+    border-radius: 40px
+    position: relative
+    box-shadow: 0 8px 0 0 rgba(186, 156, 0, 1)
+    margin: 30px 0
+    border: none
+    outline: none
+    cursor: pointer
+
+
+
+// Вспомогательные стили
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before
+  color: #5A0000
+  font-size: 10px
+.welcome-mob
+  display: none
+  padding-top: 20px
+.hidden
+  display: none
+
+
+
+
+
+
+
+@import "media" // Всегда в конце
